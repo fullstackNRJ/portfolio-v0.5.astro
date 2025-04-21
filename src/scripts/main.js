@@ -241,7 +241,7 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
 
     function handleWindowResize() {
         //update text
-        const width = window.innerWidth;
+        const width = window?.innerWidth;
         if (width > 768) {
             updateButtonText('blogs', 'B')
             updateButtonText('services', 'S')
@@ -255,7 +255,7 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
         }
     }
 
-    window.addEventListener('resize', () => {
+    window?.addEventListener('resize', () => {
         handleWindowResize();
     })
     function updateButtonText(id, text) {
@@ -270,7 +270,7 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
     document.addEventListener('DOMContentLoaded', () => {
 
 
-        const width = window.innerWidth;
+       const width = window?.innerWidth;
         const cta = document.getElementById('book-call-cta');
         if (width > 768) {
             cta.style.display = 'block';
@@ -293,7 +293,8 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
 
 
         const modal = document.getElementById('modal');
-        window.addEventListener("click", function (event) {
+        
+        window?.addEventListener("click", function (event) {
             if (event.target === modal) {
                 modal.style.display = "none";
             }
@@ -314,7 +315,7 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
         console.log('wtf', idx);
         btn.addEventListener('mouseover', (ev) => {
             console.log('mouseover', idx);
-            const width = window.innerWidth;
+            const width = window?.innerWidth;
             if (width > 768) {
                 if (idx === 0) updateButtonText('blogs', 'Blogs');
                 if (idx === 1) updateButtonText('services', 'Services');
@@ -329,7 +330,7 @@ const introHtml = `<section id="intro" style="max-width: 800px; margin: auto; te
         });
 
         btn.addEventListener('mouseout', () => {
-            const width = window.innerWidth;
+            const width = window?.innerWidth;
             if (width > 768) {
                 if (idx === 0) updateButtonText('blogs', 'B');
                 if (idx === 1) updateButtonText('services', 'S');

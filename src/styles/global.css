@@ -228,6 +228,32 @@ header {
     }
 }
 
+.webflow-button{
+	position: fixed;
+	bottom: 2rem;
+	right: 4rem;
+	background-color: var(--black-1);
+	border: none;
+	border-radius: 1rem;
+	color: var(--text-color);
+	cursor: pointer;
+	padding: 1rem;
+	font-weight: 500;
+	z-index: 1000;
+	transition: all 0.3s ease-in-out;
+}
+
+a{
+	text-decoration: none;
+}
+
+.webflow-logo{
+	display: flex;
+	align-items: center;
+	gap:1rem;
+	color: var(--text-color-3);
+}
+
 
 #infinite-marquee {
     display: flex;

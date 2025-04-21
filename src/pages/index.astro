@@ -39,7 +39,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</header>
 	
-			<section id="description" onclick="openmvpwebsite()">
+			<section id="description" >
 				<div class="company">
 					<div class="company_logo"><img class="company-logo" src="src/imgs/themvpco.svg" /></div>
 					<h2>The MVP co.</h2>
@@ -52,7 +52,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div style="display: flex; justify-content: space-between;">
 					<!-- <a>Hire me</a> -->
 	
-					<a class="link-btn" href="webflow.html" target="_blank">Visit Website</a>
+					<a class="link-btn" href="https://themvpco.one" target="_blank">Visit Website</a>
 				</div>
 			</section>
 	
@@ -74,7 +74,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<button class="action-btn-side projects" onclick="sscrollTo('projects')">Projects (cmd+P)</button>
 				<button class="action-btn-side faqs" onclick="sscrollTo('faq')">FAQs (cmd+F)</button>
 			</section>
-	
+
+			<!--Webflow Button -->
+			<aside>
+				<div class="webflow-button">
+					<a href="/webflow" target="_blank">
+					<div class="webflow-logo">
+						
+						<i class="devicon-webflow-original"></i>
+          
+						<i>Build with webflow</i>
+					</div>
+					</a>
+					
+				</div>
+			</aside>
+
 			<section id="infinite-marquee">
 				<div class="marquee-items">
 					<div class="marquee">
@@ -523,7 +538,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			document.querySelectorAll(".faq-question").forEach((button) => {
 				button.addEventListener("click", () => {
 					const answer = button.nextElementSibling;
-					answer.style.display = answer.style.display === "block" ? "none" : "block";
+				if(answer) answer.style.display = answer.style.display === "block" ? "none" : "block";
 				});
 			});
 		</script>
@@ -552,14 +567,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<script>
 			let year = new Date().getFullYear();
 			document.getElementById("year").innerHTML = year;
-	
+			
+			if(typeof window !== 'undefined') {
+				window.document.getElementById('description')?.addEventListener('click', 
 			function openmvpwebsite() {
 				window.open("https://themvpco.one/", "_blank");
-			}
+			})
+		}
 		</script>
 	
 		<!-- your content here... -->
-		<script src="./scripts/main.js"></script>
+		<script src="../scripts/main.js"></script>
 		<!-- <Footer /> -->
 	</body>
 </html>
