@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import Linkedin from '../images/linkedin.svg'
 ---
 
 <!doctype html>
@@ -16,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<header>
 				<div>
 					<div class="avatar_container">
-						<img src="src/imgs/pp.png" alt="avatar" class="avatar">
+						<img src="/images/pp.png" alt="avatar" class="avatar">
 					</div>
 	
 					<h1>Neeraj</h1>
@@ -29,19 +31,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 				<div class="links">
 					<!--  <span><a  href="mailto:https://github.com/fullstackNRJ" ><img src="imgs/mail.svg" /></a></span> -->
-					<span><a href="https://linkedin.com/fullstackNRJ"><img class="icon linkedin"
-								src="src/imgs/linkedin.svg" /></a></span>
-					<span><a href="https://x.com/neeraj_builds"><img class="icon x" src="src/imgs/x2.svg" /></a></span>
+					<span><a href="https://linkedin.com/fullstackNRJ"><Image alt="linkedin" class="icon linkedin"
+								src={Linkedin} /></a></span>
+					<span><a href="https://x.com/neeraj_builds"><img class="icon x" src="images/x2.svg" /></a></span>
 					<span><a href="https://github.com/fullstackNRJ"><img class="icon github"
-								src="src/imgs/github.svg" /></a></span>
+								src="images/github.svg" /></a></span>
 					<span><a href="https://medium.com/fullstackNRJ"><img class="icon medium"
-								src="src/imgs/medium.svg" /></a></span>
+								src="images/medium.svg" /></a></span>
 				</div>
 			</header>
 	
 			<section id="description" >
 				<div class="company">
-					<div class="company_logo"><img class="company-logo" src="src/imgs/themvpco.svg" /></div>
+					<div class="company_logo"><img class="company-logo" src="/images/themvpco.svg" /></div>
 					<h2>The MVP co.</h2>
 				</div>
 				<div class="content">
