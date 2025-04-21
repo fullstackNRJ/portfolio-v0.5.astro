@@ -26,30 +26,64 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 	title={SITE_TITLE}
 	href={new URL('rss.xml', Astro.site)}
 />
-<meta name="generator" content={Astro.generator} />
+<!-- <meta name="generator" content={Astro.generator} />
 
-<!-- Font preloads -->
+<!-- Font preloads 
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 
-<!-- Canonical URL -->
+<!-- Canonical URL 
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
+<!-- Primary Meta Tags 
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / Facebook 
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
-<!-- Twitter -->
+<!-- Twitter 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+ -->
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Neeraj 🪷</title>
+	<meta name="title" content={title} />
+    <meta name="description"
+        content="Hey, I'm Neeraj. I'm a software engineer turned freelancer turned agency owner. I enjoy building stuff on the internet.">
+    <meta name="author" content="Neeraj M">
+
+    <meta property="og:title" content="Neeraj">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.neerajmukta.com/">
+    <meta property="og:description"
+        content="Hey, I'm Neeraj. I'm a software engineer turned freelancer turned agency owner. I enjoy building stuff on the internet.">
+    <meta property="og:image" content="imgs/og_image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neeraj">
+    <meta name="twitter:description"
+        content="Hey, I'm Neeraj. I'm a software engineer turned freelancer turned agency owner. I enjoy building stuff on the internet.">
+    <meta name="twitter:image" content="https://framerusercontent.com/images/qzcHceLhX9mbJ71pDPf1TrU1Oxo.png">
+    <link rel="canonical" href="https://neerajmukta.com/">
+    <meta property="og:url" content="https://neerajmukta.com/">
+
+
+    <link rel="stylesheet" href="styles/global.css">
+    <!-- devicons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />

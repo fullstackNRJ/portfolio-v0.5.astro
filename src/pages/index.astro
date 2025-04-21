@@ -13,37 +13,553 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<header>
+				<div>
+					<div class="avatar_container">
+						<img src="src/imgs/pp.png" alt="avatar" class="avatar">
+					</div>
+	
+					<h1>Neeraj</h1>
+	
+					<div class="titles">
+						<i>Consultant</i>
+						<i>Engineer</i>
+						<i>Builder</i>
+					</div>
+				</div>
+				<div class="links">
+					<!--  <span><a  href="mailto:https://github.com/fullstackNRJ" ><img src="imgs/mail.svg" /></a></span> -->
+					<span><a href="https://linkedin.com/fullstackNRJ"><img class="icon linkedin"
+								src="src/imgs/linkedin.svg" /></a></span>
+					<span><a href="https://x.com/neeraj_builds"><img class="icon x" src="src/imgs/x2.svg" /></a></span>
+					<span><a href="https://github.com/fullstackNRJ"><img class="icon github"
+								src="src/imgs/github.svg" /></a></span>
+					<span><a href="https://medium.com/fullstackNRJ"><img class="icon medium"
+								src="src/imgs/medium.svg" /></a></span>
+				</div>
+			</header>
+	
+			<section id="description" onclick="openmvpwebsite()">
+				<div class="company">
+					<div class="company_logo"><img class="company-logo" src="src/imgs/themvpco.svg" /></div>
+					<h2>The MVP co.</h2>
+				</div>
+				<div class="content">
+					<p> We help founders plan, design, and build their business ideas in no time.</p>
+				</div>
+	
+	
+				<div style="display: flex; justify-content: space-between;">
+					<!-- <a>Hire me</a> -->
+	
+					<a class="link-btn" href="webflow.html" target="_blank">Visit Website</a>
+				</div>
+			</section>
+	
+			<!--Floating Book a free call cta-->
+			<div id="book-call-cta" class="book-call-cta">
+				<a href="https://cal.com/themvpco/15min" target="_blank">Book a Free Call</a>
+			</div>
+	
+			<section id="action-btns">
+				<button class="action-btn intro" onclick="openModal(introHtml)">Intro (cmd+I)</button>
+				<button class="action-btn exp" onclick="openModal(expHtml, 'right')">Experience (cmd+E)</button>
+				<button class="action-btn help" onclick="openModal(helpHtml, 'left')">How can I help (cmd+H)</button>
+				<button class="action-btn reach" onclick="openModal(reachOutHtml, 'bottom')">Reach out (cmd+R)</button>
+			</section>
+	
+			<section id="action-btns-side">
+				<button class="action-btn-side blogs" onclick="openPopup('intro')">Blogs (cmd+B)</button>
+				<button class="action-btn-side services" onclick="sscrollTo('services')">Services (cmd+S)</button>
+				<button class="action-btn-side projects" onclick="sscrollTo('projects')">Projects (cmd+P)</button>
+				<button class="action-btn-side faqs" onclick="sscrollTo('faq')">FAQs (cmd+F)</button>
+			</section>
+	
+			<section id="infinite-marquee">
+				<div class="marquee-items">
+					<div class="marquee">
+						<i class="devicon-webflow-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-html5-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-css3-plain-wordmark colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-tailwindcss-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-javascript-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-typescript-plain colored"></i>
+	
+					</div>
+					<div class="marquee">
+						<i class="devicon-jquery-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-react-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-nodejs-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-express-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-mongodb-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-postgresql-plain colored"></i>
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-couchbase-plain-wordmark colored"></i>
+					</div>
+	
+					<div class="marquee">
+						<i class="devicon-python-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-fastapi-plain-wordmark"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-nextjs-original-wordmark"></i>
+	
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-github-original-wordmark"></i>
+	
+					</div>
+					<div class="marquee">
+	
+	
+						<i class="devicon-k6-original colored"></i>
+	
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-electron-original colored"></i>
+	
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-vitejs-plain colored"></i>
+					</div>
+	
+					<div class="marquee">
+						<i class="devicon-figma-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-android-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-apple-original"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-cloudflare-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-cloudflareworkers-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-canva-original"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-playwright-plain colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-redis-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-replit-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-supabase-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-vercel-original-wordmark colored"></i>
+	
+					</div>
+					<!-- </div>
+		<div class="marquee-items"> -->
+					<!-- duplicate items-->
+					<div class="marquee">
+						<i class="devicon-webflow-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-html5-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-css3-plain-wordmark colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-tailwindcss-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-javascript-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-typescript-plain colored"></i>
+	
+					</div>
+					<div class="marquee">
+						<i class="devicon-jquery-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-react-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-nodejs-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-express-original colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-mongodb-plain colored"></i>
+					</div>
+					<div class="marquee">
+						<i class="devicon-postgresql-plain colored"></i>
+					</div>
+	
+					<div class="marquee">
+	
+	
+						<i class="devicon-couchbase-plain-wordmark colored"></i>
+					</div>
+	
+					<div class="marquee">
+						<i class="devicon-python-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-fastapi-plain-wordmark"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-nextjs-original-wordmark"></i>
+	
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-github-original-wordmark"></i>
+	
+					</div>
+					<div class="marquee">
+	
+	
+						<i class="devicon-k6-original colored"></i>
+	
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-electron-original colored"></i>
+	
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-vitejs-plain colored"></i>
+					</div>
+	
+					<div class="marquee">
+						<i class="devicon-figma-plain colored"></i>
+					</div>
+					<div class="marquee">
+	
+						<i class="devicon-android-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-apple-original"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-cloudflare-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-cloudflareworkers-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-canva-original"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-playwright-plain colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-redis-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-replit-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-supabase-plain-wordmark colored"></i>
+	
+					</div>
+	
+					<div class="marquee">
+	
+						<i class="devicon-vercel-original-wordmark colored"></i>
+	
+					</div>
+				</div>
+	
+			</section>
+	
+			<!--   <section id="projects">
+			<h2>Projects</h2>
+		</section> -->
+	
+		<section id="services">
+			<h2>💼 Services & Pricing</h2>
+			<p class="pricing-note"><sup style="font-size: 1.5rem;">*</sup> All rates are indicative and final quotation will be provided based on scope and complexity.</p>
+		
+			<div class="pricing-container">
+				
+				<div class="pricing-item">
+					<h3>🌐 Website Development (Open Source)</h3>
+					<p class="price">$99</p>
+					<ul>
+						<li>Responsive & SEO-friendly</li>
+						<li>Custom design & layout</li>
+						<li>Basic animations & interactions</li>
+						<li>Performance optimization</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>⚡ Website Development (No Code)</h3>
+					<p class="price">$199</p>
+					<ul>
+						<li>Built with Webflow, Bubble, or Framer</li>
+						<li>Pixel-perfect responsive design</li>
+						<li>CMS & automation setup</li>
+						<li>Faster go-to-market</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>🛠️ Custom JavaScript Tools</h3>
+					<p class="price">$149</p>
+					<ul>
+						<li>Custom-built JS utilities</li>
+						<li>Browser extensions</li>
+						<li>Interactive widgets</li>
+						<li>API integrations</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>🚀 Web App Development (Code) </h3>
+					<p class="price">starts at $499</p>
+					<ul>
+						<li>React, Node.js, PostgreSQL</li>
+						<li>Authentication & APIs</li>
+						<li>Custom dashboards & components</li>
+						<li>Deployed on AWS/Vercel</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>⚙️ Web App Development (No Code)</h3>
+					<p class="price">starts at $699</p>
+					<ul>
+						<li>Built with Bubble or Webflow</li>
+						<li>Scalable database structure</li>
+						<li>Automation workflows</li>
+						<li>Third-party integrations</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>🔄 Website Revamp</h3>
+					<p class="price">starts at $299</p>
+					<ul>
+						<li>UI/UX improvements</li>
+						<li>Speed & performance boost</li>
+						<li>SEO & accessibility fixes</li>
+						<li>Code refactoring</li>
+					</ul>
+				</div>
+		
+				<div class="pricing-item">
+					<h3>🎓 Training / Mentoring</h3>
+					<p class="price">starts at $999</p>
+					<ul>
+						<li>Webflow, React, or AI development</li>
+						<li>1-on-1 guidance</li>
+						<li>Live coding sessions</li>
+						<li>Project-based learning</li>
+					</ul>
+				</div>
+		
+			</div>
+		</section>
+	
+		<section id="faq">
+			<h2>❓ Frequently Asked Questions</h2>
+		
+			<div class="faq-container">
+				
+				<div class="faq-item">
+					<button class="faq-question">💡 What services do you offer?</button>
+					<div class="faq-answer">
+						I specialize in **MVP development, AI-powered apps, automation, full-stack web & mobile development, and consulting.**
+					</div>
+				</div>
+		
+				<div class="faq-item">
+					<button class="faq-question">⏳ How long will my project take?</button>
+					<div class="faq-answer">
+						Project timelines depend on **scope & complexity**, but I always aim for **efficient and fast delivery** while maintaining high quality. Let's discuss your specific needs!
+					</div>
+				</div>
+		
+				<div class="faq-item">
+					<button class="faq-question">💰 What are your rates?</button>
+					<div class="faq-answer">
+						My rates vary based on project complexity and scope. Contact me for a customized quote!
+					</div>
+				</div>
+		
+				<div class="faq-item">
+					<button class="faq-question">📜 Do you offer contracts or NDAs?</button>
+					<div class="faq-answer">
+						Yes! I provide **contracts for clarity** and **NDAs for confidentiality** when required.
+					</div>
+				</div>
+		
+				<div class="faq-item">
+					<button class="faq-question">🔧 Will you maintain the project after delivery?</button>
+					<div class="faq-answer">
+						Yes! I offer **ongoing support, bug fixes, and maintenance** on a retainer or as needed.
+					</div>
+				</div>
+		
+				<div class="faq-item">
+					<button class="faq-question">🎨 Can you help with UI/UX design?</button>
+					<div class="faq-answer">
+						Absolutely! I can assist with **UI/UX design, wireframing, and front-end implementation**.
+					</div>
+				</div>
+		
+			</div>
+		</section>
+		
+		<script>
+			document.querySelectorAll(".faq-question").forEach((button) => {
+				button.addEventListener("click", () => {
+					const answer = button.nextElementSibling;
+					answer.style.display = answer.style.display === "block" ? "none" : "block";
+				});
+			});
+		</script>
+	
+			<section id="wall-of-fame">
+				
+			</section>
+	
+			<!--Modal-->
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()">&times;</span>
+					<div id="modal-body">
+						add some content here
+					</div>
+				</div>
+			</div>
+	
+	
+			<footer>
+				<p>&copy; <span id="year">2025</span> Neeraj M</p>
+			</footer>
+	
 		</main>
+	
+		<script>
+			let year = new Date().getFullYear();
+			document.getElementById("year").innerHTML = year;
+	
+			function openmvpwebsite() {
+				window.open("https://themvpco.one/", "_blank");
+			}
+		</script>
+	
+		<!-- your content here... -->
+		<script src="./scripts/main.js"></script>
 		<Footer />
 	</body>
 </html>
