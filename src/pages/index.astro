@@ -71,7 +71,7 @@ import Linkedin from '../images/linkedin.svg'
 			</section>
 	
 			<section id="action-btns-side">
-				<button class="action-btn-side blogs" onclick="openPopup('intro')">Blogs (cmd+B)</button>
+				<button class="action-btn-side blogs" id="blogs-btn">Blogs (cmd+B)</button>
 				<button class="action-btn-side services" onclick="sscrollTo('services')">Services (cmd+S)</button>
 				<button class="action-btn-side projects" onclick="sscrollTo('projects')">Projects (cmd+P)</button>
 				<button class="action-btn-side faqs" onclick="sscrollTo('faq')">FAQs (cmd+F)</button>
@@ -540,6 +540,7 @@ import Linkedin from '../images/linkedin.svg'
 			document.querySelectorAll(".faq-question").forEach((button) => {
 				button.addEventListener("click", () => {
 					const answer = button.nextElementSibling;
+					//@ts-ignore
 				if(answer) answer.style.display = answer.style.display === "block" ? "none" : "block";
 				});
 			});
@@ -568,12 +569,18 @@ import Linkedin from '../images/linkedin.svg'
 	
 		<script>
 			let year = new Date().getFullYear();
+			//@ts-ignore
 			document.getElementById("year").innerHTML = year;
 			
 			if(typeof window !== 'undefined') {
 				window.document.getElementById('description')?.addEventListener('click', 
 			function openmvpwebsite() {
 				window.open("https://themvpco.one/", "_blank");
+			})
+			
+			window.document.getElementById('blogs-btn')?.addEventListener('click', 
+			function openmvpwebsite() {
+				window.location.pathname = '/blog';
 			})
 		}
 		</script>
